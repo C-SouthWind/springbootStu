@@ -1,0 +1,43 @@
+country: china
+province: zhejiang
+city: hangzhou
+area: binjiang
+
+port: 8080
+
+party: true
+
+user:
+  name: chj
+  age: 24
+
+likes:
+  - game
+  - music
+  - sleep
+
+users:
+  - name: chj
+    age: 24
+  - name: ls
+    age: 18
+
+center:
+  baseDir: /usr/local/fire/
+  #使用￥{属性名}引用数据
+  dataDir: ${center.baseDir}data
+  tmpDir: ${center.baseDir}tmp
+  logDir: ${center.baseDir}log
+  msgDir: ${center.baseDir}msg
+  #使用引号包裹的字符串，其中的转义符可以生效
+  dir: "${center.baseDir}\t aa"
+
+
+#创建类，用于封装下面的数据
+#由spring帮我们去加载到数据对象中，一定要告诉spring加载这组信息
+#使用的时候从spring中直接获取信息使用
+datasource:
+  driver: com.mysql.jdbc.Driver
+  url: jdbc:mysql://localhost/springboot_db
+  username: root
+  password: 123456
