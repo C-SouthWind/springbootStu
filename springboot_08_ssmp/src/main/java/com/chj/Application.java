@@ -9,7 +9,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @package: com.chj
  * @className: Application
  * @author: chj
- * @description:
+ * @description: 启动类
  * @date: Created in  2023/3/9 20:04
  * @version: 1.0
  */
