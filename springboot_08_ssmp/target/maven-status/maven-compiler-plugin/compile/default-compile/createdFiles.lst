@@ -1,0 +1,7 @@
+com\chj\controller\BookController.class
+com\chj\config\MybatisPlusConfig.class
+com\chj\config\ControllerAdvice.class
+com\chj\mapper\UserMPMapper.class
+com\chj\model\User.class
+com\chj\Application.class
+com\chj\config\Result.class

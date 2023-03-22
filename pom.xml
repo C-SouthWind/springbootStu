@@ -14,11 +14,6 @@
     <artifactId>springbootStu</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>pom</packaging>
-    <modules>
-        <module>springboot_01_01_quickstart</module>
-        <module>springboot_01_03_quickstart</module>
-        <module>springboot_08_ssmp</module>
-    </modules>
 
 
     <dependencies>
