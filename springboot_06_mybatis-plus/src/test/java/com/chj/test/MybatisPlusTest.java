@@ -22,6 +22,6 @@ public class MybatisPlusTest {
 
     @Test
     public void test(){
-        userMapper.selectById(2);
+        System.out.println(userMapper.selectById(2));
     }
 }
