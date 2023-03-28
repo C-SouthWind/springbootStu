@@ -1,0 +1,8 @@
+server:
+  port: 8081
+
+#不参与重启的排除项
+devtools:
+  restart:
+    exclude: application.yml
+    enabled: false

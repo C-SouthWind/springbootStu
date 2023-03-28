@@ -1,0 +1,16 @@
+#应用环境
+#spring:
+#  profiles:
+#    active: test
+#    include: testMvc,testDb
+
+
+
+#应用环境
+spring:
+  profiles:
+    active: prod
+    group:
+      "dev": devMvc,devDb
+      "test": testMvc,testDb
+      "prod": prodMvc,prodDb

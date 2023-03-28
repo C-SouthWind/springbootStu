@@ -1,0 +1,15 @@
+#服务器端口设置
+server:
+  port: 80
+
+#修改banner
+spring:
+  banner:
+    image:
+      location: a.png
+
+
+#日志
+logging:
+  level:
+    root: info
