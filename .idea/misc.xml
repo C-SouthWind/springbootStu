@@ -12,7 +12,6 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/springboot_0xxxxx - 副本/pom.xml" />
         <option value="$PROJECT_DIR$/springboot_01_02_quickstart/pom.xml" />
-        <option value="$PROJECT_DIR$/springboot_02_base_configuration/pom.xml" />
         <option value="$PROJECT_DIR$/springboot_03_yaml/pom.xml" />
         <option value="$PROJECT_DIR$/springboot_04_junit/pom.xml" />
         <option value="$PROJECT_DIR$/springboot_05_mybatis/pom.xml" />
@@ -26,6 +25,7 @@
         <option value="$PROJECT_DIR$/springboot_11_log/pom.xml" />
         <option value="$PROJECT_DIR$/springboot_12_hot_deploy/pom.xml" />
         <option value="$PROJECT_DIR$/springboot_13_configuration/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot_14_test/pom.xml" />
       </list>
     </option>
   </component>

@@ -11,6 +11,7 @@
         <module name="springboot_03_yaml" />
         <module name="springboot_05_mybatis" />
         <module name="springboot_07_druid" />
+        <module name="springboot_14_test" />
         <module name="springboot_08_ssmp" />
         <module name="springboot_0xxxxx" />
         <module name="springboot_01_02_quickstart" />
@@ -20,13 +21,17 @@
         <module name="springboot_01_01_quickstart" />
         <module name="springboot_13_configuration" />
         <module name="springboot_06_mybatis-plus" />
-        <module name="springboot_02_base_configuration" />
         <module name="springboot_11_log" />
         <module name="springboot_12_hot_deploy" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="springboot_01_03_quickstart" target="11" />
+      <module name="springboot_02_base_configuration" target="11" />
+      <module name="springboot_0xxxxx (1)" target="11" />
+      <module name="springboot_0xxxxx (2)" target="11" />
+      <module name="springboot_14_test (1)" target="11" />
+      <module name="springboot_14_test (2)" target="11" />
     </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
@@ -43,11 +48,16 @@
       <module name="springboot_08_ssmp" options="-parameters" />
       <module name="springboot_09_config" options="-parameters" />
       <module name="springboot_0xxxxx" options="-parameters" />
+      <module name="springboot_0xxxxx (1)" options="-parameters" />
+      <module name="springboot_0xxxxx (2)" options="-parameters" />
       <module name="springboot_10_01_import" options="-parameters" />
       <module name="springboot_10_profiles" options="-parameters" />
       <module name="springboot_11_log" options="-parameters" />
       <module name="springboot_12_hot_deploy" options="-parameters" />
       <module name="springboot_13_configuration" options="-parameters" />
+      <module name="springboot_14_test" options="-parameters" />
+      <module name="springboot_14_test (1)" options="-parameters" />
+      <module name="springboot_14_test (2)" options="-parameters" />
     </option>
   </component>
 </project>

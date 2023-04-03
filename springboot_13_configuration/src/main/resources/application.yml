@@ -1,0 +1,13 @@
+servers:
+  #  ipAddress: 192.168.0.1 #驼峰
+  #  ipaddress: 192.168.0.1
+  #  ip_address: 192.168.0.1 #unline
+  IPADDRESS: 192.168.0.1 #烤肉串模式
+  #  IP_ADDRESS: 192.168.0.1 #常量
+  port: 23458
+  timeout: -1
+  serverTimeOut: 2
+  data-size: 10
+
+datasource:
+  driverClassName: com.mysql.jdbc.Driver123

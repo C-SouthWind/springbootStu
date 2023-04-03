@@ -1,7 +1,12 @@
 package com.chj;
 
+import com.alibaba.druid.pool.DruidDataSource;
+import com.chj.config.ServerConfig;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.context.annotation.Bean;
 
 /**
  * @projectName: springboot
@@ -14,7 +19,21 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 @SpringBootApplication
 public class Application {
+
+    @Bean
+    @ConfigurationProperties(prefix = "datasource")
+    public DruidDataSource dataSource() {
+        DruidDataSource druidDataSource = new DruidDataSource();
+        return druidDataSource;
+    }
+
+
     public static void main(String[] args) {
-        SpringApplication.run(Application.class, args);
+
+        args = new String[]{"--server.port=89"};
+
+        ConfigurableApplicationContext run = SpringApplication.run(Application.class, args);
+        System.out.println(run.getBean(ServerConfig.class));
+        System.out.println(run.getBean(DruidDataSource.class).getDriverClassName());
     }
 }
