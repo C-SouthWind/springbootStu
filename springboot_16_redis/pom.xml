@@ -9,8 +9,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>springboot_14_test</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <artifactId>springboot_16_redis</artifactId>
 
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
@@ -31,11 +30,6 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
             <version>3.0.4</version>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-tx</artifactId>
-            <scope>test</scope>
         </dependency>
     </dependencies>
 

@@ -10,6 +10,7 @@ import cn.hutool.poi.excel.ExcelUtil;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.chj.mapper.ImportUserMapper;
 import com.chj.model.Appuser;
+import com.chj.service.ImportHandle;
 import com.chj.service.ImportService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -32,45 +33,33 @@ import java.util.concurrent.*;
  * @version: 1.0
  */
 @Service
-public class ImportServiceImpl extends ServiceImpl<ImportUserMapper,Appuser> implements ImportService {
+public class ImportServiceImpl implements ImportService {
 
     @Autowired
-    @Resource
     private ImportUserMapper userMapper;
 
+    @Autowired
+    private ImportHandle importHandle;
+
     ExecutorService executor = ExecutorBuilder.create()
-            .setCorePoolSize(5)
+            .setCorePoolSize(10)
             .setMaxPoolSize(10)
             .setWorkQueue(new LinkedBlockingQueue<>(100))
             .build();
 
 
     @Override
-    @Transactional(transactionManager = "transactionManager")
     public void excelImport() {
         ExcelReader reader = ExcelUtil.getReader("C:\\Users\\chj\\Desktop\\aaa.xlsx");
         List<Map<String, Object>> maps = reader.readAll();
         List<List<Map<String, Object>>> split = ListUtil.split(maps, maps.size()/5);
         for (List<Map<String, Object>> mapList : split) {
-            new Thread(()->{
-                CopyOnWriteArrayList<Appuser> cowal = new CopyOnWriteArrayList();
-                //check(MapUtil.toListMap(mapList));
-                for (Map<String, Object> stringObjectMap : mapList) {
-                    cowal.add(new Appuser().setId(Long.valueOf(String.valueOf(stringObjectMap.get("id"))))
-                            .setName(String.valueOf(stringObjectMap.get("name"))).
-                            setEmail(String.valueOf(stringObjectMap.get("email"))).
-                            setPhone(String.valueOf(stringObjectMap.get("phone"))).
-                            setGender(Integer.valueOf(String.valueOf(stringObjectMap.get("gender")))).
-                            setPassword(String.valueOf(stringObjectMap.get("password"))).
-                            setAge(Integer.valueOf(String.valueOf(stringObjectMap.get("age")))));
-                }
-                System.out.println(cowal.size());
-                insertUser(cowal);
-            }).start();
+            executor.submit(()->{
+                importHandle.handle(mapList);
+            });
         }
-
-
     }
+
 
 //    @Override
 //    public void excelImport() {
@@ -98,35 +87,6 @@ public class ImportServiceImpl extends ServiceImpl<ImportUserMapper,Appuser> imp
 //        insertUser(copyOnWriteArrayList);
 //    }
 
-    private synchronized void insertUser(CopyOnWriteArrayList<Appuser> copyOnWriteArrayList){
-        this.saveBatch(copyOnWriteArrayList);
-    }
-
-    private void check(Map<String, List<Object>> stringListMap){
-        for (String s : stringListMap.keySet()) {
-            switch (s){
-                case "id" :
-                    for (Object o : stringListMap.get(s)) {
-                        if (o.equals("999")) {
-                            System.out.println("id===="+s);
-                        }
-                    }
-                    break;
-                case "name" :
-                    System.out.println("name===="+s);break;
-                case "email" :
-                    System.out.println("email===="+s);break;
-                case "phone" :
-                    System.out.println("phone===="+s);break;
-                case "gender" :
-                    System.out.println("gender===="+s);break;
-                case "password" :
-                    System.out.println("password===="+s);break;
-                case "age" :
-                    System.out.println("age===="+s);break;
-            }
-        }
-    }
 
     public static void main(String[] args) {
         int i = 999;
