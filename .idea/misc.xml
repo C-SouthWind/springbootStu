@@ -30,6 +30,7 @@
         <option value="$PROJECT_DIR$/springboot_16_redis/pom.xml" />
         <option value="$PROJECT_DIR$/springboot_17_mogodb/pom.xml" />
         <option value="$PROJECT_DIR$/springboot_17_mongodb/pom.xml" />
+        <option value="$PROJECT_DIR$/springboot_18_cache/pom.xml" />
       </list>
     </option>
   </component>
