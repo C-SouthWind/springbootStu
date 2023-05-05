@@ -1,0 +1,17 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/test
+    username: root
+    password: 123456
+
+jetcache:
+  remote:
+    default:
+      type: redis
+      host: 101.34.62.226
+      port: 6379
+      poolConfig:
+        maxTotal: 50
+
+
