@@ -1,6 +1,7 @@
 package com.chj.service;
 
 import com.alicp.jetcache.Cache;
+import com.alicp.jetcache.anno.CacheType;
 import com.alicp.jetcache.anno.CreateCache;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.cache.annotation.Cacheable;
@@ -21,8 +22,15 @@ import java.util.concurrent.TimeUnit;
 @Service
 public class ServiceImpl implements IService {
 
-    @CreateCache(name = "jetCache", expire = 3600, timeUnit = TimeUnit.SECONDS)
+    @CreateCache(name = "jetCache", expire = 3600, timeUnit = TimeUnit.SECONDS, cacheType = CacheType.REMOTE)
     private Cache<String, String> cache;
+
+    @CreateCache(area = "sms", name = "jetCache", expire = 3600, timeUnit = TimeUnit.SECONDS)
+    private Cache<String, String> cache1;
+
+
+    @CreateCache(name = "jetCache", expire = 3600, timeUnit = TimeUnit.SECONDS, cacheType = CacheType.LOCAL)
+    private Cache<String, String> cache2;
 
     @Override
     public String code(String tel) {
