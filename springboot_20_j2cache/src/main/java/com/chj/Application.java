@@ -1,13 +1,10 @@
 package com.chj;
 
-
-import com.alicp.jetcache.anno.config.EnableCreateCacheAnnotation;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
-import org.springframework.context.annotation.EnableMBeanExport;
 
 /**
- * @projectName: springbok
+ * @projectName: springboot
  * @package: com.chj
  * @className: Springboot0103QuickstartApplication
  * @author: chj
@@ -16,7 +13,6 @@ import org.springframework.context.annotation.EnableMBeanExport;
  * @version: 1.0
  */
 @SpringBootApplication
-@EnableCreateCacheAnnotation
 public class Application {
     public static void main(String[] args) {
         SpringApplication.run(Application.class, args);
