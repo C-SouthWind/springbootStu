@@ -16,6 +16,7 @@
         <module name="springboot_07_druid" />
         <module name="springboot_14_test" />
         <module name="springboot_08_ssmp" />
+        <module name="springboot_22_mail" />
         <module name="springboot_0xxxxx" />
         <module name="springboot_19_jetcache" />
         <module name="springboot_01_02_quickstart" />
