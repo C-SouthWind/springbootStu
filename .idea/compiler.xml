@@ -12,6 +12,7 @@
         <module name="springboot_17_mongodb" />
         <module name="springboot_03_yaml" />
         <module name="springboot_05_mybatis" />
+        <module name="springboot_21_task" />
         <module name="springboot_07_druid" />
         <module name="springboot_14_test" />
         <module name="springboot_08_ssmp" />
@@ -70,6 +71,7 @@
       <module name="springboot_18_cache" options="-parameters" />
       <module name="springboot_19_jetcache" options="-parameters" />
       <module name="springboot_20_j2cache" options="-parameters" />
+      <module name="springboot_21_task" options="-parameters" />
     </option>
   </component>
 </project>
