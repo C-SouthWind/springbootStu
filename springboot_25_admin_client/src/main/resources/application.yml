@@ -1,0 +1,21 @@
+server:
+  port: 8081
+spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:8080
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    enabled-by-default: true
+info:
+  appName: @project.artifactId@
+  version: @project.version@
+  company: 陈浩杰
+  author: chj
