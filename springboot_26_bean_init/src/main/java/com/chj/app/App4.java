@@ -1,9 +1,10 @@
 package com.chj.app;
 
+import com.chj.bean.Dog;
 import com.chj.config.SpringConfig3;
+import com.chj.config.SpringConfig4;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 /**
  * @projectName: springbootStu
@@ -14,17 +15,16 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
  * @date: Created in  2023/6/6 20:12
  * @version: 1.0
  */
-public class App3 {
+public class App4 {
 
     public static void main(String[] args) {
 
-        ApplicationContext ctx = new AnnotationConfigApplicationContext(SpringConfig3.class);
+        ApplicationContext ctx = new AnnotationConfigApplicationContext(SpringConfig4.class);
         String[] beanDefinitionNames = ctx.getBeanDefinitionNames();
         for (String beanDefinitionName : beanDefinitionNames) {
             System.out.println(beanDefinitionName);
         }
-        Object dog = ctx.getBean("dog");
-        System.out.println(dog);
+        System.out.println(ctx.getBean(Dog.class));
     }
 }
 
