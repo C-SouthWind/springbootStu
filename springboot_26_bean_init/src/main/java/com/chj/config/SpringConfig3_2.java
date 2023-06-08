@@ -3,9 +3,11 @@ package com.chj.config;
 import com.chj.bean.DogFactoryBean;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.ImportResource;
 
 /**
+ * 导入applicationContext1.xml中的所有配置
+ *
  * @projectName: springbootStu
  * @package: com.chj.config
  * @className: SpringConfig3
@@ -15,11 +17,7 @@ import org.springframework.context.annotation.Configuration;
  * @version: 1.0
  */
 
-@ComponentScan({"com.chj.bean", "com.chj.config"})
-public class SpringConfig3 {
+@ImportResource("applicationContext1.xml")
+public class SpringConfig3_2 {
 
-    @Bean
-    public DogFactoryBean dog() {
-        return new DogFactoryBean();
-    }
 }

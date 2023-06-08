@@ -26,7 +26,7 @@ import org.springframework.context.annotation.Configuration;
  * @version: 1.0
  */
 @Configuration(proxyBeanMethods = false)
-public class SpringConfig33 {
+public class SpringConfig3_3 {
 
     @Bean
     public Cat cat() {

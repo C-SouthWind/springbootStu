@@ -1,9 +1,9 @@
 package com.chj.config;
 
-import com.chj.bean.DogFactoryBean;
-import org.springframework.context.annotation.Bean;
+import com.chj.bean.MyImportSelector;
 import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.ImportResource;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 
 /**
  * @projectName: springbootStu
@@ -14,8 +14,9 @@ import org.springframework.context.annotation.ImportResource;
  * @date: Created in  2023/6/6 20:36
  * @version: 1.0
  */
-
-@ImportResource("applicationContext1.xml")
-public class SpringConfig32 {
+@Configuration
+@ComponentScan(basePackages = "com.chj")
+@Import(MyImportSelector.class)
+public class SpringConfig6 {
 
 }

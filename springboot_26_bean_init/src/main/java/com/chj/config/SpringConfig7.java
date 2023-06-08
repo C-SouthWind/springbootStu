@@ -1,9 +1,10 @@
 package com.chj.config;
 
-import com.chj.bean.DogFactoryBean;
-import org.springframework.context.annotation.Bean;
+import com.chj.bean.MyImportSelector;
+import com.chj.bean.MyRegistrar;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 
 /**
  * @projectName: springbootStu
@@ -14,12 +15,7 @@ import org.springframework.context.annotation.Configuration;
  * @date: Created in  2023/6/6 20:36
  * @version: 1.0
  */
+@Import(MyRegistrar.class)
+public class SpringConfig7 {
 
-@ComponentScan({"com.chj.bean", "com.chj.config"})
-public class SpringConfig3 {
-
-    @Bean
-    public DogFactoryBean dog() {
-        return new DogFactoryBean();
-    }
 }

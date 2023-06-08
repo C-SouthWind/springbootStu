@@ -1,6 +1,7 @@
 package com.chj.service.impl;
 
 import com.chj.service.BookService;
+import org.springframework.stereotype.Service;
 
 /**
  * @projectName: springbootStu
@@ -11,6 +12,7 @@ import com.chj.service.BookService;
  * @date: Created in  2023/6/6 20:07
  * @version: 1.0
  */
+@Service("bookService")
 public class BookServiceImpl1 implements BookService {
     @Override
     public void check() {
