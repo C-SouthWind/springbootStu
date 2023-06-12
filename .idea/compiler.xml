@@ -14,6 +14,7 @@
         <module name="springboot_26_bean_init" />
         <module name="springboot_0xxxxx" />
         <module name="springboot_19_jetcache" />
+        <module name="springboot_28_bean_properties" />
         <module name="springboot_10_profiles" />
         <module name="springboot_25_admin_client" />
         <module name="springboot_10_01_import" />
@@ -26,6 +27,7 @@
         <module name="springboot_03_yaml" />
         <module name="springboot_21_task" />
         <module name="springboot_07_druid" />
+        <module name="springboot_27_bean_load" />
         <module name="springboot_23_mq" />
         <module name="springboot_01_02_quickstart" />
         <module name="springboot_04_junit" />

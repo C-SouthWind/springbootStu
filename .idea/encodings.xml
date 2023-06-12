@@ -50,6 +50,10 @@
     <file url="file://$PROJECT_DIR$/springboot_25_admin_client/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot_26_bean_init/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/springboot_26_bean_init/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot_27_bean_load/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot_27_bean_load/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot_28_bean_properties/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/springboot_28_bean_properties/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
   </component>
