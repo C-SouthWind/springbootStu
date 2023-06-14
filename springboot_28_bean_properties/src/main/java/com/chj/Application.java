@@ -1,6 +1,7 @@
 package com.chj;
 
 import com.chj.bean.CartoonCatAdnMouse;
+import com.chj.bean.Wolf;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -22,5 +23,6 @@ public class Application {
         ConfigurableApplicationContext ctx = SpringApplication.run(Application.class, args);
         CartoonCatAdnMouse bean = ctx.getBean(CartoonCatAdnMouse.class);
         bean.play();
+        ctx.getBean("wolf", Wolf.class).printBean();
     }
 }

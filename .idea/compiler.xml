@@ -35,6 +35,7 @@
         <module name="springboot_20_j2cache" />
         <module name="springboot_13_configuration" />
         <module name="springboot_16_redis" />
+        <module name="springboot_29_meta_code" />
         <module name="springboot_11_log" />
         <module name="springboot_12_hot_deploy" />
       </profile>

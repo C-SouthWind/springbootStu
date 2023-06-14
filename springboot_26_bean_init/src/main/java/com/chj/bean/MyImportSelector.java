@@ -8,6 +8,8 @@ import java.util.Map;
 /**
  * 自动装配底层
  * 多数在源码中用到  用类名加载
+ * <p>
+ * importingClassMetadata 这个类被哪个类import导入 就可以获取那个类的所有信息
  *
  * @projectName: springbootStu
  * @package: com.chj.bean
