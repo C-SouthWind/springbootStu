@@ -1,0 +1,11 @@
+users:
+  age: 18
+  sex: 女
+  name: zhangSan
+
+#只能排除自动配置的bean
+spring:
+  autoconfigure:
+    exclude:
+    #排除多个 集合语法
+    #- com.chj.configuration.UserAutoConfiguration
