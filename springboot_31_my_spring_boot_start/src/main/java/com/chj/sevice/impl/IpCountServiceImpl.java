@@ -1,8 +1,10 @@
 package com.chj.sevice.impl;
 
+import com.chj.properties.IpProperties;
 import com.chj.sevice.IpCountService;
 import jakarta.servlet.http.HttpServletRequest;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 import org.springframework.web.HttpRequestHandler;
 
@@ -50,7 +52,38 @@ public class IpCountServiceImpl implements IpCountService {
         } else {
             ipCountMap.put(ip, count + 1);
         }
+    }
 
+    @Autowired
+    private IpProperties ipProperties;
+
+
+    @Scheduled(cron = "0/5 * * * * ?")
+    /**
+     * 读取springboot  bean中的属性
+     */
+    @Scheduled(cron = "0/#{ipProperties.cycle} * * * * ?")
+    /**
+     * 读取springboot属性  相当于@Value()
+     */
+    //@Scheduled(cron = "0/${tools.ip.cycle:5} * * * * ?")
+    public void print() {
+
+        System.out.println("            IP访问监控");
+        System.out.println("+----------ip-address----------+---num---+");
+        System.out.println("|                              |         |");
+
+        for (Map.Entry<String, Integer> stringIntegerEntry : ipCountMap.entrySet()) {
+            System.out.printf("|%28s  |%5d  |", stringIntegerEntry.getKey(), stringIntegerEntry.getValue());
+            System.out.println();
+        }
+
+        System.out.println("+------------------------------+---------+");
+
+
+        if (ipProperties.getCycleReset()) {
+            ipCountMap.clear();
+        }
     }
 }
 

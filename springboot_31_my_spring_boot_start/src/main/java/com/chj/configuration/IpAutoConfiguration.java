@@ -1,9 +1,11 @@
 package com.chj.configuration;
 
+import com.chj.properties.IpProperties;
 import com.chj.sevice.IpCountService;
 import com.chj.sevice.impl.IpCountServiceImpl;
 import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
+import org.springframework.scheduling.annotation.EnableScheduling;
 
 /**
  * @projectName: springbootStu
@@ -14,6 +16,9 @@ import org.springframework.context.annotation.Configuration;
  * @date: Created in  2023/6/15 21:18
  * @version: 1.0
  */
+@EnableScheduling
+//@EnableConfigurationProperties(IpProperties.class)
+@Import(IpProperties.class)
 public class IpAutoConfiguration {
 
 
