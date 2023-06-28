@@ -1,0 +1,27 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.chj.configuration.UserProperties",
+      "name": "users",
+      "type": "com.chj.configuration.UserProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.chj.configuration.UserProperties",
+      "name": "users.age",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.chj.configuration.UserProperties",
+      "name": "users.name",
+      "type": "java.lang.String"
+    },
+    {
+      "sourceType": "com.chj.configuration.UserProperties",
+      "name": "users.sex",
+      "type": "java.lang.String"
+    }
+  ]
+}

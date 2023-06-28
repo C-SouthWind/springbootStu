@@ -1,0 +1,32 @@
+{
+  "hints": [],
+  "groups": [
+    {
+      "sourceType": "com.chj.properties.IpProperties",
+      "name": "tools.ip",
+      "type": "com.chj.properties.IpProperties"
+    }
+  ],
+  "properties": [
+    {
+      "sourceType": "com.chj.properties.IpProperties",
+      "defaultValue": 5,
+      "name": "tools.ip.cycle",
+      "description": "日志显示周期",
+      "type": "java.lang.Long"
+    },
+    {
+      "sourceType": "com.chj.properties.IpProperties",
+      "defaultValue": false,
+      "name": "tools.ip.cycle-reset",
+      "description": "是否周期内重置数据",
+      "type": "java.lang.Boolean"
+    },
+    {
+      "sourceType": "com.chj.properties.IpProperties",
+      "name": "tools.ip.model",
+      "description": "日志输出模式 detail:  simple:极简模式",
+      "type": "java.lang.String"
+    }
+  ]
+}

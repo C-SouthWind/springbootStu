@@ -1,0 +1,21 @@
+server:
+  port: 8081
+spring:
+  boot:
+    admin:
+      client:
+        url: http://localhost:8080
+management:
+  endpoint:
+    health:
+      show-details: always
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+    enabled-by-default: true
+info:
+  appName: springboot_25_admin_client
+  version: 1.0-SNAPSHOT
+  company: 陈浩杰
+  author: chj

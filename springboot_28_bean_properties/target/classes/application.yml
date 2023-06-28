@@ -1,0 +1,11 @@
+cartoon:
+  cat:
+    #name: "tom"
+    name: "图多盖洛" #tom喜欢的小母猫
+    #age: 3
+    age: 5
+  mouse:
+    #name: "jerry"
+    name: "泰菲" #jerry教育的小老鼠
+    #age: 4
+    age: 1
